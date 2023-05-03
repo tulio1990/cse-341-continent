@@ -1,0 +1,32 @@
+GET http://localhost:3000/countries HTTP/1.1
+
+### POST
+POST http://localhost:3000/countries HTTP/1.1
+content-type: application/json
+
+{
+    "name": "USA",
+    "capital": "Washington D. C",
+    "lenguage": "English",
+    "demonym": "american",
+    "government": "presidential federal republic",
+    "president": "Joe Biden",
+    "population": 339665118
+}
+
+###
+GET http://localhost:3000/people HTTP/1.1
+
+### POST
+POST http://localhost:3000/people HTTP/1.1
+content-type: application/json
+
+{
+      "name": "Moises",
+      "lastname": "Benitez",
+      "birthday": "19/06/2002",
+     "nickname": "moi",
+      "city": "Georgia",
+      "country": "USA"
+}
+
