@@ -1,5 +1,8 @@
 GET http://localhost:3000/countries HTTP/1.1
 
+###
+GET http://localhost:3000/countries/6451bc4def5e2325f2774242 HTTP/1.1
+
 ### POST
 POST http://localhost:3000/countries HTTP/1.1
 content-type: application/json
@@ -17,8 +20,50 @@ content-type: application/json
 ###
 GET http://localhost:3000/people HTTP/1.1
 
+###
+GET http://localhost:3000/people/6451bd9e9c5c4f35f85da2a6 HTTP/1.1
+
 ### POST
 POST http://localhost:3000/people HTTP/1.1
+content-type: application/json
+
+{
+      "name": "Moises",
+      "lastname": "Benitez",
+      "birthday": "19/06/2002",
+     "nickname": "moi",
+      "city": "Georgia",
+      "country": "USA"
+}
+
+###
+GET https://cse-341-continent.onrender.com/countries HTTP/1.1
+
+###
+GET https://cse-341-continent.onrender.com/countries/6451bc4def5e2325f2774243 HTTP/1.1
+
+### POST
+POST https://cse-341-continent.onrender.com/countries HTTP/1.1
+content-type: application/json
+
+{
+    "name": "El Salvador",
+    "capital": "San Salvador",
+    "lenguage": "Spanish",
+    "demonym": "salvadoreños",
+    "government": "presidential federal republic",
+    "president": "Nayib Bukele",
+    "population": 8256123
+}
+
+###
+GET https://cse-341-continent.onrender.com/people HTTP/1.1
+
+###
+GET https://cse-341-continent.onrender.com/people/6451bd9e9c5c4f35f85da2a6 HTTP/1.1
+
+### POST
+POST https://cse-341-continent.onrender.com/people HTTP/1.1
 content-type: application/json
 
 {
