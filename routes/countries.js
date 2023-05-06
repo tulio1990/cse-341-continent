@@ -9,8 +9,8 @@ router.get('/:id', contactsCont.getACountry);
 
 router.post('/', contactsCont.newCountry);
 
-// router.put('/:id', contactsCont.updContact);
+router.put('/:id', contactsCont.updCountries);
 
-// router.delete('/:id', contactsCont.delContact);
+router.delete('/:id', contactsCont.delCountry);
 
 module.exports = router;
