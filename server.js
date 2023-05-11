@@ -3,6 +3,9 @@ var app = express();
 const bodyParser = require('body-parser');
 const mongodb = require('./db/conection');
 const port = process.env.PORT || 3000;
+const passport = require('passport');
+const session = require('express-session');
+const GitHubStrategy = require('passport-github2').Strategy;
 
 // app.use('/', bodyParser.json()).use((req, res, next) => {
 //   res.setHeader('Access-Control-Allow-Origin', '*');
