@@ -5,7 +5,7 @@ const Joi = require('joi');
 // Validation and handle
 const schema = Joi.object({
   name: Joi.string()
-    .pattern(/^[a-zA-Z]+$/)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/)
     .required()
     .messages({
       'string.pattern.base': 'The name field only accepts letters'
@@ -15,7 +15,7 @@ const schema = Joi.object({
       'string.empty': 'name field cannot be empty'
     }),
   capital: Joi.string()
-    .pattern(/^[a-zA-Z]+$/)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/)
     .required()
     .messages({
       'string.pattern.base': 'The capital field only accepts letters'
@@ -25,7 +25,7 @@ const schema = Joi.object({
       'string.empty': 'capital field cannot be empty'
     }),
   lenguage: Joi.string()
-    .pattern(/^[a-zA-Z]+$/)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/)
     .required()
     .messages({
       'string.pattern.base': 'The language field only accepts letters'
@@ -35,7 +35,7 @@ const schema = Joi.object({
       'string.empty': 'lenguage field cannot be empty'
     }),
   demonym: Joi.string()
-    .pattern(/^[a-zA-Z]+$/)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/)
     .required()
     .messages({
       'string.pattern.base': 'The demonym field only accepts letters'
@@ -45,7 +45,7 @@ const schema = Joi.object({
       'string.empty': 'demonym field cannot be empty'
     }),
   government: Joi.string()
-    .pattern(/^[a-zA-Z]+$/)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/)
     .required()
     .messages({
       'string.pattern.base': 'The government field only accepts letters'
@@ -55,7 +55,7 @@ const schema = Joi.object({
       'string.empty': 'government field cannot be empty'
     }),
   president: Joi.string()
-    .pattern(/^[a-zA-Z]+$/)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/)
     .required()
     .messages({
       'string.pattern.base': 'The president field only accepts letters'

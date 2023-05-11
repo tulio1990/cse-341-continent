@@ -5,7 +5,7 @@ const Joi = require('joi');
 // Validation and handle
 const schema = Joi.object({
   name: Joi.string()
-    .pattern(/^[a-zA-Z']+$/u)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/u)
     .required()
     .messages({
       'string.pattern.base': 'The name field only accepts letters'
@@ -15,7 +15,7 @@ const schema = Joi.object({
       'string.empty': 'name field cannot be empty'
     }),
   lastname: Joi.string()
-    .pattern(/^[a-zA-Z']+$/u)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/u)
     .required()
     .messages({
       'string.pattern.base': 'The lastname field only accepts letters'
@@ -35,7 +35,7 @@ const schema = Joi.object({
       'string.empty': 'birthday field cannot be empty'
     }),
   nickname: Joi.string()
-    .pattern(/^[a-zA-Z\s']+$/u)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/u)
     .required()
     .messages({
       'string.pattern.base': 'The nickname field only accepts letters'
@@ -45,7 +45,7 @@ const schema = Joi.object({
       'string.empty': 'nickname field cannot be empty'
     }),
   city: Joi.string()
-    .pattern(/^[a-zA-Z\s']+$/u)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/u)
     .required()
     .messages({
       'string.pattern.base': 'The city field only accepts letters'
@@ -55,7 +55,7 @@ const schema = Joi.object({
       'string.empty': 'city field cannot be empty'
     }),
   country: Joi.string()
-    .pattern(/^[a-zA-Z\s']+$/u)
+    .pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/u)
     .required()
     .messages({
       'string.pattern.base': 'The country field only accepts letters'
