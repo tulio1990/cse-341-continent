@@ -40,26 +40,26 @@ app
 
   .use(passport.session())
 
-  // .use((req, res, next) => {
-  //   res.setHeader('Access-Controll-Allow-Origin', '*');
-  //   res.setHeader(
-  //     'Access-Control-Allow-Headers',
-  //     'Origin, X-Requested-With, Content-Type, Accept, Z-Key, Authorization'
-  //   );
-  //   res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PUT, PATCH, OPTIONS, DELETE');
-  //   next();
-  // })
-  // .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
-  // .use(cors({ origin: '*' }))
-  // .use("/", require("./routes/index.js"));
-
-    .use((req, res, next) => {
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      next();
+  .use((req, res, next) => {
+    res.setHeader('Access-Controll-Allow-Origin', '*');
+    res.setHeader(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept, Z-Key, Authorization'
+    );
+    res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PUT, PATCH, OPTIONS, DELETE');
+    next();
   })
   .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
   .use(cors({ origin: '*' }))
   .use("/", require("./routes/index.js"));
+
+  //   .use((req, res, next) => {
+  //     res.setHeader('Access-Control-Allow-Origin', '*');
+  //     next();
+  // })
+  // .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
+  // .use(cors({ origin: '*' }))
+  // .use("/", require("./routes/index.js"));
 
 passport.use(
   new GitHubStrategy(
@@ -69,9 +69,7 @@ passport.use(
       callbackURL: process.env.CALLBACK_URL
     },
     function (accessToken, refreshToken, profile, done) {
-      //User.findOrCreate({ githubId: profile.id }, function (err, user) {
       return done(null, profile);
-      //});
     }
   )
 );
